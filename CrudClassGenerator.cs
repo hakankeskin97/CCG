@@ -201,8 +201,25 @@ namespace CrudClassGenerator
 
         private void GeneratePrmClass()
         {
-            if (IsFileExist(PrmClassFullPath, PrmClassName)) return;
+            string nameSpace = string.Empty;
+            string targetPath = string.Empty;
+            string targetFullPath = string.Empty;
 
+            if (radioButtonUseInterfacePath.Checked)
+            {
+                if (IsFileExist(PrmClassFullPathGenerated, PrmClassNameGenerated)) return;
+                nameSpace = InterfaceNameSpace;
+                targetPath = PrmClassPath;
+                targetFullPath = PrmClassFullPathGenerated;
+            }
+            else
+            {
+                if (IsFileExist(PrmClassFullPathGeneratedCC, PrmClassNameGenerated)) return;
+                nameSpace = CCNameSpace;
+                targetPath = PrmClassPathCC;
+                targetFullPath = PrmClassFullPathGeneratedCC;
+            }
+                
             string prmCode = string.Empty;
             string infoCode = string.Empty;
             string code = string.Empty;
@@ -219,12 +236,12 @@ namespace CrudClassGenerator
 					{1}
 					{2}
 				]]
-				", InterfaceNameSpace, prmCode, infoCode, GetCCGGeneratorComment(), inheritanceClassName);
+				", nameSpace, prmCode, infoCode, GetCCGGeneratorComment(), inheritanceClassName);
             code = code.Replace("[[", "{").Replace("]]", "}");
             //code = code.Replace(ClassName + "Prm", ClassName);
             #endregion
 
-            bool written = WriteFile(code, InterfacePath, PrmClassFullPath);
+            bool written = WriteFile(code, targetPath, targetFullPath);
 
             if (!checkBoxSelectMultyTables.Checked && written) Message.MsgCreationSucceeded(PrmClassName);
         }
@@ -794,11 +811,11 @@ namespace CrudClassGenerator
 
             AddRegion(ref pPrmCode, "PARAMETER CLASSES");
 
-            if (checkBoxCreateOnlySelectAsClass.Checked)
-            { 
-                pInfoCode = string.Empty;
-                return;
-            }
+            //if (checkBoxCreateOnlySelectAsClass.Checked)
+            //{ 
+            //    pInfoCode = string.Empty;
+            //    return;
+            //}
 
             string fieldName = string.Empty;
             string maxLength = string.Empty;
@@ -1782,6 +1799,7 @@ namespace CrudClassGenerator
         private string CodeForSelectAsClassList()
         {
             string classPrm = string.Empty;
+            string additionForIdentitiColumn = string.Empty;
 
             foreach (DataRow rw in DTColumnsInfo.Rows)
             {
@@ -1789,7 +1807,18 @@ namespace CrudClassGenerator
                 string dbType = rw[Fields.SysTypeName].ToString();
                 string csType = GetCsType(dbType);
                 bool nullable = rw[Fields.IsNullable].ToBool();
+                bool identity = rw[Fields.IsIdentity].ToBool();
+
                 if (csType != DtCs.csString && csType != DtCs.csByteArr && nullable) csType += "?";
+
+                if (identity)
+                {
+                    additionForIdentitiColumn = string.Format(
+                    @"if (!pDt.Columns.Contains('{0}'))
+                        [[
+                            pDt.AddRowNumber('{0}');
+                        ]]", clmName);
+                }
 
                 if (nullable)
                     classPrm += string.Format("prm.{0} = rw['{0}'] is DBNull ? null : ({1})rw['{0}'];", clmName, csType) + NewLine;
@@ -1866,6 +1895,8 @@ namespace CrudClassGenerator
 				{0} prm;
 				List<{0}> prms = new List<{0}>();
 
+                {2}
+
 				foreach (DataRow rw in pDt.Rows)
 				[[
 					prm = new {0}();
@@ -1875,8 +1906,8 @@ namespace CrudClassGenerator
 				return prms;
 			]]");
 
-            string code = string.Join("\r\n", code1 , code2);
-            code = string.Format(code, ClassName, classPrm);
+            string code = string.Join("\r\n", code1, code2);
+            code = string.Format(code, ClassName, classPrm, additionForIdentitiColumn);
             code = code.Replace("[[", "{").Replace("]]", "}").Replace("'", ((char)34).ToString());
             return code;
         }

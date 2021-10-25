@@ -1,0 +1,1 @@
+Data Source=10.0.36.38;Initial Catalog=BTYS;Integrated Security=True|ConnStrSql

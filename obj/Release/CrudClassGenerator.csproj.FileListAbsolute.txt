@@ -1,0 +1,13 @@
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Release\CrudClassGenerator.exe.config
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Release\CrudClassGenerator.exe.manifest
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Release\CrudClassGenerator.application
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Release\CrudClassGenerator.exe
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Release\CrudClassGenerator.pdb
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.FormMain.resources
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.Properties.Resources.resources
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.csproj.GenerateResource.Cache
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.exe.manifest
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.application
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.exe
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.pdb
+D:\KISISEL\Projeler\CodePlex\CCG\CrudClassGenerator\obj\Release\CrudClassGenerator.csprojResolveAssemblyReference.cache

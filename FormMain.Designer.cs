@@ -41,6 +41,8 @@
             this.textBoxInheritanceClassNameForPrm = new System.Windows.Forms.TextBox();
             this.labelPrmInheritPrmClassFrom = new System.Windows.Forms.Label();
             this.groupBoxPrm = new System.Windows.Forms.GroupBox();
+            this.radioButtonUseCCPath = new System.Windows.Forms.RadioButton();
+            this.radioButtonUseInterfacePath = new System.Windows.Forms.RadioButton();
             this.checkBoxPrmClassSeparate = new System.Windows.Forms.CheckBox();
             this.checkBoxPrmClassInCCFile = new System.Windows.Forms.CheckBox();
             this.checkBoxPrmClassInInterfaceFile = new System.Windows.Forms.CheckBox();
@@ -50,6 +52,7 @@
             this.checkBoxTemplateInterface = new System.Windows.Forms.CheckBox();
             this.checkBoxTemplateCc = new System.Windows.Forms.CheckBox();
             this.groupBoxCRUD = new System.Windows.Forms.GroupBox();
+            this.checkBoxCreateOnlySelectAsClass = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBoxAddServiceContract = new System.Windows.Forms.CheckBox();
@@ -186,7 +189,6 @@
             this.timerReadConnStr = new System.Windows.Forms.Timer(this.components);
             this.panelTables = new System.Windows.Forms.Panel();
             this.listBoxTables = new System.Windows.Forms.ListBox();
-            this.checkBoxCreateOnlySelectAsClass = new System.Windows.Forms.CheckBox();
             this.tabControlGeneration.SuspendLayout();
             this.tabPageCCG.SuspendLayout();
             this.groupBoxLogTable.SuspendLayout();
@@ -330,6 +332,8 @@
             // 
             // groupBoxPrm
             // 
+            this.groupBoxPrm.Controls.Add(this.radioButtonUseCCPath);
+            this.groupBoxPrm.Controls.Add(this.radioButtonUseInterfacePath);
             this.groupBoxPrm.Controls.Add(this.checkBoxPrmClassSeparate);
             this.groupBoxPrm.Controls.Add(this.checkBoxPrmClassInCCFile);
             this.groupBoxPrm.Controls.Add(this.checkBoxPrmClassInInterfaceFile);
@@ -340,6 +344,32 @@
             this.groupBoxPrm.TabIndex = 131;
             this.groupBoxPrm.TabStop = false;
             // 
+            // radioButtonUseCCPath
+            // 
+            this.radioButtonUseCCPath.AutoSize = true;
+            this.radioButtonUseCCPath.Location = new System.Drawing.Point(603, 9);
+            this.radioButtonUseCCPath.Name = "radioButtonUseCCPath";
+            this.radioButtonUseCCPath.Size = new System.Drawing.Size(64, 17);
+            this.radioButtonUseCCPath.TabIndex = 122;
+            this.radioButtonUseCCPath.Text = "CC Path";
+            this.toolTipMain.SetToolTip(this.radioButtonUseCCPath, "Parametre sınıfını Crud Class dizinine yazmak için bu seçeneği işaretleyin.");
+            this.radioButtonUseCCPath.UseVisualStyleBackColor = true;
+            this.radioButtonUseCCPath.Visible = false;
+            // 
+            // radioButtonUseInterfacePath
+            // 
+            this.radioButtonUseInterfacePath.AutoSize = true;
+            this.radioButtonUseInterfacePath.Checked = true;
+            this.radioButtonUseInterfacePath.Location = new System.Drawing.Point(502, 9);
+            this.radioButtonUseInterfacePath.Name = "radioButtonUseInterfacePath";
+            this.radioButtonUseInterfacePath.Size = new System.Drawing.Size(92, 17);
+            this.radioButtonUseInterfacePath.TabIndex = 121;
+            this.radioButtonUseInterfacePath.TabStop = true;
+            this.radioButtonUseInterfacePath.Text = "Interface Path";
+            this.toolTipMain.SetToolTip(this.radioButtonUseInterfacePath, "Parametre sınıfını Interface dizinine yazmak için bu seçeneği işaretleyin.\r\n");
+            this.radioButtonUseInterfacePath.UseVisualStyleBackColor = true;
+            this.radioButtonUseInterfacePath.Visible = false;
+            // 
             // checkBoxPrmClassSeparate
             // 
             this.checkBoxPrmClassSeparate.AutoSize = true;
@@ -349,8 +379,8 @@
             this.checkBoxPrmClassSeparate.Size = new System.Drawing.Size(130, 17);
             this.checkBoxPrmClassSeparate.TabIndex = 34;
             this.checkBoxPrmClassSeparate.Text = "As a Separate \'cs\' File";
-            this.toolTipMain.SetToolTip(this.checkBoxPrmClassSeparate, "Parametre sınıfını, CRUD BS sınıfı ile aynı \'cs\' dosyasına yazmak için bu seçeneğ" +
-        "i işaretleyin.");
+            this.toolTipMain.SetToolTip(this.checkBoxPrmClassSeparate, "Parametre sınıfını, ayrı bir\r\n \'cs\' dosyasına yazmak için bu seçeneği işaretleyin" +
+        ".");
             this.checkBoxPrmClassSeparate.UseVisualStyleBackColor = true;
             this.checkBoxPrmClassSeparate.CheckedChanged += new System.EventHandler(this.PrmClassTypeChanged);
             // 
@@ -363,8 +393,8 @@
             this.checkBoxPrmClassInCCFile.Size = new System.Drawing.Size(85, 17);
             this.checkBoxPrmClassInCCFile.TabIndex = 33;
             this.checkBoxPrmClassInCCFile.Text = "in CC \'cs\' file";
-            this.toolTipMain.SetToolTip(this.checkBoxPrmClassInCCFile, "Parametre sınıfını, CRUD CC sınıfı ile aynı \'cs\' dosyasına yazmak için bu seçeneğ" +
-        "i işaretleyin.");
+            this.toolTipMain.SetToolTip(this.checkBoxPrmClassInCCFile, "Parametre sınıfını, Crud Class sınıfı ile aynı \'cs\' dosyasına yazmak için bu seçe" +
+        "neği işaretleyin.");
             this.checkBoxPrmClassInCCFile.UseVisualStyleBackColor = true;
             this.checkBoxPrmClassInCCFile.CheckedChanged += new System.EventHandler(this.PrmClassTypeChanged);
             // 
@@ -458,6 +488,19 @@
             this.groupBoxCRUD.Size = new System.Drawing.Size(671, 53);
             this.groupBoxCRUD.TabIndex = 129;
             this.groupBoxCRUD.TabStop = false;
+            // 
+            // checkBoxCreateOnlySelectAsClass
+            // 
+            this.checkBoxCreateOnlySelectAsClass.AutoSize = true;
+            this.checkBoxCreateOnlySelectAsClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxCreateOnlySelectAsClass.Location = new System.Drawing.Point(501, 10);
+            this.checkBoxCreateOnlySelectAsClass.Name = "checkBoxCreateOnlySelectAsClass";
+            this.checkBoxCreateOnlySelectAsClass.Size = new System.Drawing.Size(167, 17);
+            this.checkBoxCreateOnlySelectAsClass.TabIndex = 131;
+            this.checkBoxCreateOnlySelectAsClass.Text = "Create Only SelectAsClassList";
+            this.toolTipMain.SetToolTip(this.checkBoxCreateOnlySelectAsClass, resources.GetString("checkBoxCreateOnlySelectAsClass.ToolTip"));
+            this.checkBoxCreateOnlySelectAsClass.UseVisualStyleBackColor = true;
+            this.checkBoxCreateOnlySelectAsClass.Visible = false;
             // 
             // label5
             // 
@@ -2133,19 +2176,6 @@
             this.listBoxTables.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTables.Size = new System.Drawing.Size(192, 82);
             this.listBoxTables.TabIndex = 131;
-            // 
-            // checkBoxCreateOnlySelectAsClass
-            // 
-            this.checkBoxCreateOnlySelectAsClass.AutoSize = true;
-            this.checkBoxCreateOnlySelectAsClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxCreateOnlySelectAsClass.Location = new System.Drawing.Point(501, 10);
-            this.checkBoxCreateOnlySelectAsClass.Name = "checkBoxCreateOnlySelectAsClass";
-            this.checkBoxCreateOnlySelectAsClass.Size = new System.Drawing.Size(167, 17);
-            this.checkBoxCreateOnlySelectAsClass.TabIndex = 131;
-            this.checkBoxCreateOnlySelectAsClass.Text = "Create Only SelectAsClassList";
-            this.toolTipMain.SetToolTip(this.checkBoxCreateOnlySelectAsClass, resources.GetString("checkBoxCreateOnlySelectAsClass.ToolTip"));
-            this.checkBoxCreateOnlySelectAsClass.UseVisualStyleBackColor = true;
-            this.checkBoxCreateOnlySelectAsClass.Visible = false;
             // 
             // FormMain
             // 
@@ -4482,6 +4512,8 @@
         #endregion
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSkin;
         private System.Windows.Forms.CheckBox checkBoxCreateOnlySelectAsClass;
+        private System.Windows.Forms.RadioButton radioButtonUseCCPath;
+        private System.Windows.Forms.RadioButton radioButtonUseInterfacePath;
     }
 }
 

@@ -30,6 +30,9 @@ namespace CrudClassGenerator
             public const string checkBoxTemplateCc = "Bu seçenek işaretlendiğinde, şablon bir CC sınıfı \"partial\" olarak ayrıca üretilir.";
             public const string checkBoxTemplateInterface = "Bu seçenek işaretlendiğinde, bir Interface sınıfı \"partial\" olarak ayrıca üretilir.";
 
+            public const string radioButtonUseInterfacePath = "Parametre sınıfını Interface dizinine yazmak için bu seçeneği işaretleyin.";
+            public const string radioButtonUseCCPath = "Parametre sınıfını Crud Class dizinine yazmak için bu seçeneği işaretleyin.";
+
             public const string checkBoxTypedDs = "Bu seçenek işaretlendiğinde, oluşturulan CRUD sınıfına; \r\n\"SelectAsTypedDataSet\" ve \"InsertOrUpdate\" methodu eklenir.";
             public const string checkBoxAddNoLock = "Select cümlelerine \"WITH(NOLOCK)\" eklemek için bu seçeneği işaretleyin.";
             public const string checkBoxAddServiceContract = "Üretilen Interface üzerinde bir EndPoint oluşturmak ve böylece, \r\nservis erişimi sağlamak için \"ServiceContract\" niteliği (attribute) eklenmelidir.";
@@ -107,6 +110,9 @@ namespace CrudClassGenerator
             public const string checkBoxPrmClassSeparate = "If you check this property, parameter classes are written in separate file.";
             public const string checkBoxTemplateCc = "If you check this property, a template CC class is generated as \"partial\".";
             public const string checkBoxTemplateInterface = "If you check this property, a template Interface class is generated as \"partial\"..";
+
+            public const string radioButtonUseInterfacePath = "Check this option to write the parameter class to the Interface directory.";
+            public const string radioButtonUseCCPath = "Check this option to write the parameter class to the Crud Class directory.";
 
             public const string checkBoxTypedDs = "If you check this property \"SelectAsTypedDataSet\" and \r\n\"InsertOrUpdate\" methods are added.";
             public const string checkBoxAddNoLock = "To Add \"WITH(NOLOCK)\" for Select Caluses check this property";
@@ -224,7 +230,10 @@ namespace CrudClassGenerator
             this.toolTipMain.SetToolTip(checkBoxTemplateCc, langTr ? Tooltips.TooltipTr.checkBoxTemplateCc : Tooltips.TooltipEn.checkBoxTemplateCc);
             this.toolTipMain.SetToolTip(checkBoxTemplateInterface, langTr ? Tooltips.TooltipTr.checkBoxTemplateInterface : Tooltips.TooltipEn.checkBoxTemplateInterface);
             this.toolTipMain.SetToolTip(checkBoxAutoSetClassName, langTr ? Tooltips.TooltipTr.checkBoxAutoSetClassName : Tooltips.TooltipEn.checkBoxAutoSetClassName);
-            
+
+            this.toolTipMain.SetToolTip(radioButtonUseInterfacePath, langTr ? Tooltips.TooltipTr.radioButtonUseInterfacePath : Tooltips.TooltipEn.radioButtonUseInterfacePath);
+            this.toolTipMain.SetToolTip(radioButtonUseCCPath, langTr ? Tooltips.TooltipTr.radioButtonUseCCPath : Tooltips.TooltipEn.radioButtonUseCCPath);
+
             this.toolTipMain.SetToolTip(textBoxInterfaceSubPath1, langTr ? Tooltips.TooltipTr.textBoxInterfaceSubPath1 : Tooltips.TooltipEn.textBoxInterfaceSubPath1);
             this.toolTipMain.SetToolTip(textBoxCcSubPath1, langTr ? Tooltips.TooltipTr.textBoxCcSubPath1 : Tooltips.TooltipEn.textBoxCcSubPath1);
             this.toolTipMain.SetToolTip(textBoxTypeSubPath1, langTr ? Tooltips.TooltipTr.textBoxTypeSubPath1 : Tooltips.TooltipEn.textBoxTypeSubPath1);

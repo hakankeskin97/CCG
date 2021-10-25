@@ -1,0 +1,1 @@
+Data Source=SSGKRAPOR01\SGK;Initial Catalog=RAPOR_OFFLINE;Integrated Security=True|ConnStrSql

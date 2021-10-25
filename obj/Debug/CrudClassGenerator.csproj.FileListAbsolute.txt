@@ -1,0 +1,13 @@
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Debug\CrudClassGenerator.exe.config
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Debug\CrudClassGenerator.exe.manifest
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Debug\CrudClassGenerator.application
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Debug\CrudClassGenerator.exe
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Debug\CrudClassGenerator.pdb
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\bin\Debug\Oracle.DataAccess.dll
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.FormMain.resources
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.Properties.Resources.resources
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.csproj.GenerateResource.Cache
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.exe.manifest
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.application
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.exe
+D:\KISISEL\PROJELER\CodePlex\CCG\CrudClassGenerator\obj\Debug\CrudClassGenerator.pdb

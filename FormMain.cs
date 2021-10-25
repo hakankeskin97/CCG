@@ -310,9 +310,41 @@ namespace CrudClassGenerator
             //get { return string.Format("{0}Prm.cs", ClassName); } //Tur: parametre sınıfına suffix eklenmek istenirse, özellik bu şekilde kullanılabilir. Eng: if desired to add suffix to Parameter class name, property can be used in this way. Hakan Keskin "23 May 2013"
             get { return string.Format("{0}.cs", ClassName); }
         }
+        private string PrmClassNameGenerated
+        {
+            get { return string.Format("{0}.generated", ClassName); }
+        }
+        private string PrmClassFullName
+        {
+            get { return string.Format("{0}.cs", PrmClassName); }
+        }
+        private string PrmClassFullNameGenerated
+        {
+            get { return string.Format("{0}.cs", PrmClassNameGenerated); }
+        }
+        private string PrmClassPath
+        {
+            get { return string.Join("", ProjectPath, InterfaceSubPath1, InterfaceSubPath2); }
+        }
         private string PrmClassFullPath
         {
-            get { return string.Join(@"\", InterfacePath, PrmClassName); }
+            get { return string.Join(@"\", PrmClassPath, PrmClassName); }
+        }
+        private string PrmClassFullPathGenerated
+        {
+            get { return string.Join(@"\", PrmClassPath, PrmClassFullNameGenerated); }
+        }
+        private string PrmClassPathCC
+        {
+            get { return string.Join("", ProjectPath, CcSubPath1, CcSubPath2); }
+        }
+        private string PrmClassFullPathCC
+        {
+            get { return string.Join(@"\", PrmClassPathCC, PrmClassName); }
+        }
+        private string PrmClassFullPathGeneratedCC
+        {
+            get { return string.Join(@"\", PrmClassPathCC, PrmClassFullNameGenerated); }
         }
 
         private string StartupPath
@@ -803,6 +835,7 @@ namespace CrudClassGenerator
 
             checkBoxAddNoLock.Visible = b;
             checkBoxCreateOnlySelect.Visible = b;
+            checkBoxCreateOnlySelectAsClass.Visible = b;
             //checkBoxTypedDs.Visible = b;
 
             if (!b) checkBoxPrmClassInCCFile.Checked = b;
@@ -898,6 +931,12 @@ namespace CrudClassGenerator
                 if (sender != checkBoxPrmClassInInterfaceFile) checkBoxPrmClassInInterfaceFile.Checked = false; else checkBoxCrudInterface.Checked = true;
                 if (sender != checkBoxPrmClassInCCFile) checkBoxPrmClassInCCFile.Checked = false; else checkBoxCrudCC.Checked = true;
                 if (sender != checkBoxPrmClassSeparate) checkBoxPrmClassSeparate.Checked = false;
+            }
+
+            if (sender == checkBoxPrmClassSeparate)
+            {
+                radioButtonUseInterfacePath.Visible = chk.Checked;
+                radioButtonUseCCPath.Visible = chk.Checked;
             }
         }
 
