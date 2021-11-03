@@ -4,7 +4,7 @@
   <description asmv2:iconFile="CCG_Logo48T.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="CrudClassGenerator" version="3.3.7964.26564" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="CrudClassGenerator" version="3.3.7968.21529" language="neutral" processorArchitecture="msil" />
     <commandLine file="CrudClassGenerator.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -16,14 +16,14 @@
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
           UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
+          If you want to change the Windows User Account Control level replace the
           requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
+         If you want to utilize File and Registry Virtualization for backward
          compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrudClassGenerator.exe" size="450560">
-      <assemblyIdentity name="CrudClassGenerator" version="3.3.7964.26564" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrudClassGenerator.exe" size="447488">
+      <assemblyIdentity name="CrudClassGenerator" version="3.3.7968.21529" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CnuFCTrF4FggjTATeLbXr1OyIX0=</dsig:DigestValue>
+        <dsig:DigestValue>CVvHdgl6aOkCIm/s7/rfRtlo/7c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
