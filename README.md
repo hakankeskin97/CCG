@@ -18,25 +18,27 @@ Via these generated classes, many CRUD processes can be done without writing SQL
 _Do all these processes with just one command at a time_
 
 **Some Other Features:**
--ADO or SQL transections can be used.
--CRUD processes can be logged.
--Typed DataSet integration is possible.
+It has a simple and easy-to-use interface
+Generated classes are easy to use and performant
+In addition to the CRUD class, the Interface class can also be generated
+Parameter class can be generated as a separate file or inside a CRUD or Interface class
+CRUD operations can be logged.
+Both ADO and SQL transaction can be used
+AdHoc query can be run and this query can be logged
+Stored Procedure can be called
+Multiple generated insert commands can be sent to the database in bulk
+More than one command prepared for different operations can be sent to the database at the same time.
+During the CRUD process, the database name, connection string name and command timeout can be changed
+Dataset can be returned in DataTable type or class type
+Aggregate functions such as MIN, MAX, SUM, AVG, COUNT can be used
+Support MS-SQL AlwaysOn ROR (Read Only Routing) feature.
+Enums can be automaticly generated from Lookup or other tables with all data or partial data by writing sql query.
+Connection string can be read from config file or from registry.
+Prevents SQL Injections
+You can generate CRUD classes by selecting as many tables as you want at the same time.
 
-**+To start to use this Data-Access_Layer; +**
+To get current source codes and downloads visit https://sourceforge.net/projects/ccg4dal/
 
-**Download the fallowing files:**
-1. +For SQL Server 2005 or Higher:+
-.....a.	CCG 3.2.5 S
-.....b.	CCGDataService 3.0.0 S
-.....c.	Helper 3.0.0
-2. +For SQL Server 2005 or Higher and For Oracle:+
-.....a.	CCG 3.2.5 SO
-.....b.	CCGDataService 3.0.0 SO
-.....c.	Helper 3.0.0
+To get help about CCG please visit http://ccg.snazzydocs.com/
 
-**_Setup;_** "CCG 3.2.5 S" or "CCG 3.2.5 SO",
-**_Set_** database connection string, solution path and project names,
-**_Save_** these settings,
-**_select_** schema and table to be generated,
-**_Include_** generated classes to the projects and 
-**_start to write code._**
+You can send your questions and suggestions to ccg4dal@gmail.com
