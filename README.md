@@ -17,7 +17,7 @@ Via these generated classes, many CRUD processes can be done without writing SQL
 
 _Do all these processes with just one command at a time_
 
-**Some Other Features:**
+**Some Features:**
 
 *It has a simple and easy-to-use interface.
 
